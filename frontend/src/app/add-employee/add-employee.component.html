@@ -1,0 +1,79 @@
+<br><br>
+<br><br>
+<!-- <a routerLink="/show-all-employees" class="btn btn-primary">Go somewhere</a> -->
+<div class="container-sm">
+<div class="col-md-6 offset-md-3  container-sm ">
+    <form (ngSubmit)="onSubmit()" class="row g-3 form-container  container-sm">
+
+        <div class="form-group col-md-6">
+            <label><b>First Name</b></label>
+            <input type="text" class="form-control" id="fname" [(ngModel)]="employee.fname" name="fname" required />
+        </div>
+
+        <div class="form-group col-md-6">
+            <label><b>Last Name</b></label>
+            <input type="text" class="form-control" id="lname" [(ngModel)]="employee.lname" name="lname" required>
+        </div>
+
+        <br><br>
+
+        <div class="form-group">
+            <label><b>Email Id</b></label>
+            <input required type="email" class="form-control" id="email" [(ngModel)]="employee.email" name="email" required>
+        </div>
+
+        <br><br>
+
+        <div class="form-group col-md-6">
+            <label class="form-label"><b>Department</b></label>
+            <select id="department" class="form-select" [(ngModel)]="employee.department" name="department" required>
+                <option value="" selected>Choose...</option>
+                <option>IT</option>
+                <option>HR</option>
+                <option>Finance</option>
+                <option>Marketing</option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label class="form-label"><b>Designation</b></label>
+            <select id="designation" class="form-select" [(ngModel)]="employee.designation" name="designation" required>
+                <option value="" selected>Choose...</option>
+                <option>Developer</option>
+                <option>Manager</option>
+                <option>Analyst</option>
+                <option>Accountant</option>
+            </select>
+        </div>
+
+        <br><br>
+
+        <div class="form-group col-md-6">
+            <label><b>Salary</b></label>
+            <input type="text" class="form-control" id="salary" [(ngModel)]="employee.salary" name="salary" required>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label><b>Joining Date</b></label>
+            <input required type="text" class="form-control" id="joiningDate" [(ngModel)]="employee.joiningDate" name="joiningDate">
+        </div>
+
+        <br><br><br><br>
+
+
+        <div class="form-group col-md-6">
+            <button class="btn btn-success full-width-button" type="submit">Submit</button>
+       </div>
+       
+       <div class="col-md-6">
+        <button (click)="goToEmployeeList" class="btn btn-danger full-width-button" >Cancel</button>
+   </div>
+
+    </form>
+</div>
+</div>
+
+
+
+
+   
